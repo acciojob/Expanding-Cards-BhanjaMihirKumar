@@ -1,1 +1,48 @@
-/*  your css code here. If applicable */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+    height: 80vh;
+    gap: 10px;
+}
+
+.panel {
+    height: 100%;
+    flex: 0.5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    transition: flex 0.7s ease;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.img-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.panel.active .img-text {
+    opacity: 1;
+}
